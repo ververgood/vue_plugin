@@ -1,0 +1,133 @@
+@function A( $col ) {
+    @return $col/32+rem;
+}
+
+@function B($col){
+    @return $col*3.125+rem
+}
+
+.layer{
+   .mask{
+
+       position: fixed;
+       top: 0;
+       right: 0;
+       left: 0;
+       bottom: 0;
+       height: 100%;
+       z-index: 999;
+       background-color: rgba(0,0,0,.4);
+   }
+   .warp{
+       position: fixed;
+       overflow: auto;
+       top: 0;
+       right: 0;
+       bottom: 0;
+       left: 0;
+       height: 100%;
+       z-index: 999;
+       -webkit-overflow-scrolling: touch;
+       outline: 0;
+       .warp-content{
+           margin-left: B(-3);
+           top: 25%;
+           left: 50%;
+           width: B(6);
+           height: auto;
+           position: relative;
+           border-radius: B(.14);
+           background-color: #fff;
+           border: 0;
+           background-clip: padding-box;
+           text-align: center;
+           .layer-header{
+               position: absolute;
+               top: B(-1);
+               width: B(2);
+               height: B(2);
+               left: B(2);
+               img{
+                   width: 100%;
+               }
+           }
+           .layer-body{
+               padding: B(1) B(.2) B(0) B(.2);
+               margin-bottom: B(.4);
+               div{
+                   
+                   line-height: B(.6);
+                   font-size: A(33);
+                   color: rgb(33,33,33);
+                   border: A(0);
+                   &.around{
+                       align-items: center;
+                       justify-content: space-around;
+                       display: flex;
+                       margin-top: B(.1);
+                   }
+                   input{
+                       margin-top: B(.1);
+                       border: A(1) solid rgb(221,221,221);
+                       border-radius: A(10);
+                       height: B(.8);
+                       width: 80%;
+                       padding-left: B(.2);
+                       font-size: A(30);
+                   }
+                   img{
+                       width: A(200);
+                       height: A(60);
+                   }
+                   em{
+                       color: #D2C366;
+                       font-size: A(28);
+                   }
+               }
+           }
+           .layer-footer{
+               height: B(1.2);
+               margin: 0 B(.35);
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               &.two{
+                   justify-content: space-between;
+               }
+               
+               div{
+                   height: B(.8);
+                   width: B(2.2);
+                   line-height: B(.8);
+                   background-color: rgb(230,230,230);
+                   display: inline-block;
+                   font-size: A(30);
+                   border-radius: A(8);
+                   color: rgb(135,135,135);
+               }
+               .ok{
+                   background-color: #D2C366;
+                   color: #fff;
+               }
+               &.no{
+                   div{
+                       background-color: rgb(230,230,230);
+                       color: rgb(135,135,135);
+                   }
+               }
+           }
+       }
+
+   }
+
+
+}
+
+
+.am-modal-content {
+   
+}
+.am-modal-content {
+   position: relative;
+   
+}
