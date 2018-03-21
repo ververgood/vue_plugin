@@ -12,7 +12,12 @@ Popup.install=function(Vue,options){
         }
         $component.isVisible = false
         let p ={
-            show(text,btnarr,fn){
+            show(text,btnarr,fn,icon){
+                if(icon=="warning"){
+                    $component.imgsrc=require('./img/3.png')
+                }else if(icon=="error"){
+                    $component.imgsrc=require('./img/2.png')
+                }
                 $component.isVisible = true
                 $component.txt=text
                 $component.btnArr=btnarr

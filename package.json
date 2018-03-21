@@ -1,6 +1,6 @@
 {
   "name": "jqy_vue_plugin",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "this is my first npm plugin",
   "main": "index.js",
   "scripts": {

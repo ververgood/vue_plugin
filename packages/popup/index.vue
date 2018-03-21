@@ -4,7 +4,7 @@
       <div class="warp">
           <div class="warp-content">
               <div class="layer-header">
-                  <img src="./img/3.png" alt="">
+                  <img :src="imgsrc" alt="">
               </div>
               <div class="layer-body">
                   <div v-for='(item,index) in txt ' :key="index">{{item}}</div>
@@ -33,7 +33,7 @@ export default {
       txt:{
           type:Array,
           default: function () {
-                return ['您近期有订单申请成功','需要提交重申理由才能重新申请']
+                return []
             }
       },
       btnArr:{
@@ -41,6 +41,10 @@ export default {
           default: function () {
                 return ['确定','取消']
             }
+      },
+      imgsrc:{
+          type:String,
+          default:require('./img/1.png')
       }
   },
   methods:{
