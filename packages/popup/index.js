@@ -22,7 +22,7 @@ Popup.install=function(Vue,options){
                 $component.txt=text
                 $component.btnArr=btnarr
                 $component.$on('ok',function(){
-                    this.hide()
+                    $component.isVisible = false
                     fn()
                 })
             },
