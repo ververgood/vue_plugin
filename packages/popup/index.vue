@@ -26,7 +26,7 @@ export default {
       }
   },
   mounted () {
-      console.log(this.ok)
+      
   },
   props:{
       isVisible:Boolean,
